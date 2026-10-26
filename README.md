@@ -15,7 +15,7 @@ Bagian ini mempertahankan tiga navigasi yang menjadi tanggung jawab saya setelah
 2. Ekstrak/simpan folder ini ke `C:\xampp\htdocs\PWUTS_C02_25091397104`.
 3. Jalankan Apache dan MySQL/MariaDB di XAMPP.
 4. Pastikan database `kafein_db` dan tabel `pesanan`, `detail_pesanan`, `menu`, serta `kategori_menu` sudah ada. Jika belum, tinjau `database.sql` dan impor ke database yang benar. File SQL membuat tabel dengan `IF NOT EXISTS`; tetap lakukan backup terlebih dahulu.
-5. Impor bagian tabel `ulasan` dari `database.sql` jika tabel tersebut belum ada.
+5. Buat database kafein_db, lalu impor database.sql yang ada .
 6. Periksa `config.php`; pengaturan default adalah database `kafein_db`, user `root`, password kosong (standar XAMPP).
 7. Buka `http://localhost/PWUTS_C02_25091397104/`. Jangan membuka HTML langsung dengan double-click karena fitur AJAX/PHP membutuhkan server.
 

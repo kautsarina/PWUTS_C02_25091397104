@@ -1,0 +1,19 @@
+<div class="section-title"><div><div class="kicker">PANTAU PESANAN</div><h2>Status <em>pesanan.</em></h2></div><p>Cek status dan lihat kembali item yang pernah dipesan menggunakan nomor telepon.</p></div>
+<div class="order-lookup-layout"><form class="search-orders" id="orderSearch" novalidate><h3>Cek status pesanan</h3><label for="searchPhone">Nomor telepon saat memesan</label><input id="searchPhone" name="no_telepon" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required placeholder="Contoh: 081234567890"><button class="btn primary" type="submit">Cari Pesanan</button><p class="muted">Status dan riwayat diambil dari database pesanan. Gunakan nomor telepon yang dipakai saat transaksi.</p></form><div id="orders" class="orders" aria-live="polite"><div class="empty">Masukkan nomor telepon untuk melihat status dan rincian pesanan yang tersimpan di database.</div></div></div>
+
+<section class="transaction-section" aria-labelledby="transactionTitle">
+  <div class="section-title"><div><div class="kicker">PEMESANAN</div><h2 id="transactionTitle">Buat <em>pesanan.</em></h2></div><p>Formulir transaksi sederhana. Data divalidasi sebelum dikirim ke server.</p></div>
+  <form id="transactionForm" class="transaction-form" novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="transactionName">Nama pelanggan</label><input id="transactionName" name="name" type="text" minlength="2" maxlength="120" autocomplete="name" required placeholder="Nama lengkap"></div>
+      <div class="field"><label for="transactionPhone">Nomor telepon</label><input id="transactionPhone" name="phone" type="tel" inputmode="tel" minlength="9" maxlength="16" autocomplete="tel" required placeholder="081234567890"></div>
+      <div class="field"><label for="transactionMenu">Pilih menu</label><select id="transactionMenu" required><option value="">Memuat menu...</option></select></div>
+      <div class="field"><label for="transactionQty">Jumlah</label><input id="transactionQty" type="number" min="1" max="99" value="1" required></div>
+      <div class="field"><label for="transactionPayment">Metode pembayaran</label><select id="transactionPayment" required><option value="COD">COD</option><option value="Transfer Bank">Transfer Bank</option><option value="E-Wallet / QRIS">E-Wallet / QRIS</option></select></div>
+      <div class="field"><label for="transactionNote">Catatan (opsional)</label><input id="transactionNote" type="text" maxlength="500" placeholder="Contoh: gula sedikit"></div>
+    </div>
+    <p id="transactionTotal" class="transaction-total">Pilih menu untuk melihat harga.</p>
+    <button class="btn primary" type="submit">Kirim Pesanan</button>
+    <p id="transactionMessage" class="form-message" role="status" aria-live="polite"></p>
+  </form>
+</section>
